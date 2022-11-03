@@ -1,11 +1,18 @@
-function checkprime(n){
-count=0
-for (let i=0;i<n;i++){
-if (n%i==0){
-  return true ;
- } 
-}
-return false;
+function checkprime(number){
 
+for (let i=2;i<=Math.sqrt(number);i++){
+if (number%i==0){
+  return false;
+    }
+ }
+return true;
+  
 }
-console.log(checkprime(29);
+let number=97;
+let ans=checkprime(number);
+if(ans){
+console.log(number," is a prime number");
+}
+else{
+console.log(number," is not a prime number");
+}
